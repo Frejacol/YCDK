@@ -1,0 +1,97 @@
+---
+import { Image } from "astro:assets";
+import ycdk_logo from "../assets/ycdk_logo.png";
+---
+
+<section>
+  <div class="grid_1-2">
+    <div>
+      <Image src={ycdk_logo} alt="Young Creative Denmarks Logo" class="logo" />
+      <p>Young Creatives Denmark er en frivillig organisation, der arbejder for at give unge en solid fod inden for den kreative branche.</p>
+    </div>
+    <div>
+      <div class="grid_1-1">
+        <div>
+          <p class="title">Telefon</p>
+          <a href="tel:+4560914326">60 91 43 26</a>
+        </div>
+        <div>
+          <p class="title">Socials</p>
+          <p>
+            <a target="_blank" href="https://www.facebook.com/youngcreativesdk/?locale=da_DK">Facebook</a>
+            <br />
+            <a target="_blank" href="https://www.instagram.com/youngcreativesdenmark/">Instagram</a>
+            <br />
+            <a target="_blank" href="https://www.linkedin.com/company/young-creatives-danmark/?originalSubdomain=dk">LinkedIn</a>
+          </p>
+        </div>
+      </div>
+      <p class="title">Adresse</p>
+      <p>
+        Jacob Cameron Brook, <br /> Landskronagade 27, st., <br />
+        2100 København Ø
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    background: linear-gradient(180deg, #ff93c8, #ff5ba6);
+    padding: 4em 1em;
+  }
+
+  .logo {
+    max-width: 100%;
+    height: auto;
+  }
+
+  p {
+    font-family: "Montserrat";
+    color: #fff;
+    padding: 0.3em 0;
+    font-size: 1em;
+  }
+
+  .title {
+    font-family: "Montserrat Alt Bold";
+    margin-top: 1.3em;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+    line-height: 1.5em;
+    cursor: pointer;
+    font-family: "Montserrat";
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 2em;
+  }
+
+  @media (width >= 800px) {
+    .grid_1-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5em;
+    }
+
+    .logo {
+      max-width: 70%;
+    }
+
+    p {
+      font-size: 1.1em;
+    }
+  }
+  section {
+    padding: 2em 2em 2em 2em;
+  }
+</style>

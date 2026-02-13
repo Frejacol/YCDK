@@ -1,0 +1,111 @@
+---
+import { Image } from "astro:assets";
+import SDESL from "../assets/SDESL.png";
+import YHIC from "../assets/YHIC.png";
+import Button from "../Components/Button.astro";
+---
+
+<section>
+  <h2>Ansigt til Ansigt i Cannes</h2>
+  <p>
+    Ansigt til Ansigt forgår ikke kun her i Danmark, men vi fører også eventet over til den dejlige franske by Cannes, nede i Sydfrankrig. <br /> I Cannes fokusere vi ikke så meget på det professionelle, som portfolio, men mere på at skabe relationer med
+    andre folk fra branchen.
+  </p>
+
+  <div class="grid_1-2">
+    <Image src={YHIC} alt="Billede" class="img" />
+    <div class="text">
+      <h3>Young and hungry in Cannes</h3>
+      <p>
+        Cannes kalder, og vi svarer med tom mave og store ambitioner! Young and Hungry er dit perfektebreak fra festivalens formelle bullshit. Her møder du andre unge kreative, der også bare gerne vil have en øl, en god snak og måske finde deres
+        næste samarbejdspartner, eller bare en fed ven til resten af ugen. Kom som du er, del dine vildeste idéer over tapas, og lad os se, hvor aftenen bringer os. Ingen netværks-cringe, kun gode vibes og bedre selskab.
+      </p>
+      <Button class="btn" text="Tilmeld dig" link="https://www.facebook.com/youngcreativesdk/?locale=da_DK" />
+    </div>
+  </div>
+  <div class="grid_2-1">
+    <Image src={SDESL} alt="Billede" class="img" />
+    <div class="text2 text">
+      <h3>Speeddate en strandløve</h3>
+      <p>
+        Glem stive visitkort og awkward smalltalk, her speeddater vi strandløver! (Ja, for real). I Cannes handler det ikke kun om awards og pitches; det handler også om at slippe lidt løs og møde andre unge kreative, der er lige så klar på det sjove
+        som dig. Vi blander networking med leg, drinks med dybere snakke, og inden du ved af det, har du scoret både nye venner og måske endda dit næste projekt. Kom forbi stranden, vær med på den, vi lover, at strandløverne er mega gode lyttere.
+      </p>
+      <Button type="secondary" text="Tilmeld dig" link="https://www.facebook.com/youngcreativesdk/?locale=da_DK" />
+    </div>
+  </div>
+</section>
+
+<style>
+  h2 {
+    font-family: "Montserrat Alt Black";
+    margin: 2em 0 1em 0;
+  }
+
+  h3 {
+    font-family: "Montserrat Alt Black";
+    margin: 1.5em 0;
+  }
+
+  section {
+    padding: 0 1.5em 3em 1.5em;
+  }
+
+  p {
+    font-family: "Montserrat";
+    font-size: 0.8em;
+    line-height: 2em;
+  }
+
+  .img {
+    display: block;
+    margin: 2em auto;
+    max-width: 80%;
+    height: auto;
+  }
+
+  @media (width >= 800px) {
+    section {
+      padding: 0 8em 3em 8em;
+    }
+
+    p {
+      font-size: 1em;
+    }
+
+    h2 {
+      font-size: 2em;
+    }
+
+    h3 {
+      margin-top: 4em;
+      font-size: 1.5em;
+    }
+
+    .grid_1-2 {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 3em;
+      margin-top: 2em;
+    }
+
+    .grid_2-1 {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 3em;
+    }
+
+    .img2 {
+      grid-column: 2 / 3;
+    }
+
+    .text2 {
+      grid-row: 1 / 2;
+    }
+    .img {
+      margin: auto;
+      max-width: 75%;
+      height: auto;
+    }
+  }
+</style>

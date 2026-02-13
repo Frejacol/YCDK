@@ -1,0 +1,34 @@
+---
+import { Image } from "astro:assets";
+import little_logo from "../assets/little_logo.png";
+import Button from "../Components/Button.astro";
+---
+
+<nav>
+  <a href="/"><Image src={little_logo} alt="Et lille Young Creative Denmark logo" class="logo" /></a>
+  <Button text="Kontakt os" link="tel:+4560914326" />
+</nav>
+
+<style>
+  .logo {
+    max-width: 38%;
+    height: auto;
+  }
+
+  .logo:hover {
+    transform: scale(110%);
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  @media (width >= 800px) {
+    .logo {
+      max-width: 50%;
+    }
+  }
+</style>

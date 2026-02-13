@@ -1,0 +1,45 @@
+---
+import { Image } from "astro:assets";
+import ycdk_logo from "../assets/ycdk_logo.png";
+---
+
+<section>
+  <Image src={ycdk_logo} alt="Young Creative Denmarks Logo" class="logo" />
+  <p>Forener unge kreative talenter med branchens garvede profiler</p>
+</section>
+
+<style>
+  section {
+    background: linear-gradient(180deg, #ff5ba6, #ff93c8);
+    padding: 14em 0;
+  }
+
+  p {
+    font-family: "Montserrat";
+    color: #fff;
+    text-align: center;
+    padding: 0 0 3em 0;
+    font-size: 0.8em;
+  }
+
+  .logo {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  @media (width >= 800px) {
+    section {
+      padding: 7.5em 0;
+    }
+
+    .logo {
+      max-width: 60%;
+    }
+
+    p {
+      font-size: 1.2em;
+    }
+  }
+</style>
