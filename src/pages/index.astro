@@ -1,33 +1,15 @@
 ---
 import Hero from "../Components/Hero.astro";
-import Header from "../Components/Header.astro";
-import Footer from "../Components/Footer.astro";
 import Section1 from "../Components/Section1.astro";
 import Section2 from "../Components/Section2.astro";
 import Section3 from "../Components/Section3.astro";
 import "../styles/general.css";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <header>
-    <Header />
-  </header>
-  <body>
-    <Hero />
-    <Section1 />
-    <Section2 />
-    <Section3 />
-  </body>
-  <footer>
-    <Footer />
-  </footer>
-
-</html>
+<Layout>
+  <Hero />
+  <Section1 />
+  <Section2 />
+  <Section3 />
+</Layout>
