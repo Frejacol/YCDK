@@ -1,10 +1,30 @@
 ---
-
+import { Image } from "astro:assets";
+import haandvaekt from "../assets/haandvaekt6.jpg";
+import postit from "../assets/postit7.jpg";
 ---
 
 <section>
   <h2>Ansigt til Ansigt</h2>
   <p>Ansigt til Ansigt er et networking event for kreative, som har 0 - 3 års erfaring. <br /> Til disse events kan du møde andre inde for din branche, samt få feedback på din portfolio fra professionelle kreative.</p>
+
+  <div class="desktop">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/yG_8JC1NNBo?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="autoplay; picture-in-picture; web-share" allowfullscreen> </iframe>
+  </div>
+  <div class="mobil">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/CB8z8NgdX1s?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="autoplay; picture-in-picture; web-share" allowfullscreen> </iframe>
+  </div>
+
+  <div class="grid_1-1">
+    <Image
+      src={haandvaekt}
+      alt="Et billede af to personer der giver hånd, den ene ser lidt anstrængt ud da han har en vægt på hånden han giver hånd med. Billedet har en tekst over der siger 'Det skal ikke være så svært – tag en ven med' og oven over står der 'Ansigt til Ansigt'"
+    />
+    <Image
+      src={postit}
+      alt="Et billede af to personer, den ene sidder på en stol plasteret ind i post-it notes og ser lidt skuffet ud mens den anden står glad ved siden af og sætter post-it notes på hende. Billedet har en tekst over der siger 'Det skal ikke være så svært – tag en ven med' og oven over står der 'Ansigt til Ansigt'"
+    />
+  </div>
 </section>
 
 <style>
@@ -23,6 +43,36 @@
     line-height: 2em;
   }
 
+  .desktop iframe {
+    display: none;
+  }
+
+  .mobil iframe {
+    display: block;
+    margin: 1em 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+  }
+
+  .mobil {
+    position: relative;
+    padding-bottom: 177.78%;
+    height: 0;
+    margin: 2em auto;
+  }
+
+  .grid_1-1 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    margin: 0 auto;
+  }
+
   @media (width >= 800px) {
     section {
       padding: 0 8em 3em 8em;
@@ -34,6 +84,35 @@
 
     h2 {
       font-size: 2em;
+    }
+
+    .desktop iframe {
+      display: block;
+      margin: 1em 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+    }
+
+    .desktop {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      margin-top: 1em;
+    }
+
+    .mobil {
+      display: none;
+    }
+
+    .grid_1-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2em;
+      margin: 4em 0;
     }
   }
 </style>
